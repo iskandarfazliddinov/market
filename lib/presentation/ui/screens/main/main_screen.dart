@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
+import 'package:market/presentation/ui/screens/main/product_screen.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_drawer_item.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_shop.dart';
@@ -20,8 +21,9 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        FocusScope.of(context).unfocus(); // Close the keyboard when tapping outside
+      onTap: () {
+        FocusScope.of(context)
+            .unfocus(); // Close the keyboard when tapping outside
       },
       child: Scaffold(
         key: _scaffoldKey,
@@ -176,9 +178,14 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   itemCount: 6,
                   itemBuilder: (context, index) {
-                    return const WItemArrival(
+                    return WItemArrival(
                       url:
                           'https://static.vecteezy.com/system/resources/previews/046/829/689/non_2x/smart-watch-isolated-on-transparent-background-png.png',
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return  ProductScreen(heroIndex: index,);
+                        },));
+                      }, index: index,
                     );
                   },
                 ),
@@ -242,16 +249,32 @@ class _MainScreenState extends State<MainScreen> {
                     ])),
               ),
               const Padding(
-                padding: EdgeInsets.only(left: 30, right: 30, top: 40,bottom: 40),
+                padding:
+                    EdgeInsets.only(left: 30, right: 30, top: 40, bottom: 40),
                 child: Divider(
                   color: AppColors.grey,
                 ),
               ),
-              const WDrawerItem(title: 'Rewards', icon: AppIcons.gift,),
-              const WDrawerItem(title: 'Help', icon: AppIcons.help,),
-              const WDrawerItem(title: 'Contact Us', icon: AppIcons.action,),
-              const WDrawerItem(title: 'Privacy Policy', icon: AppIcons.privacy,),
-              const WDrawerItem(title: 'Logout', icon: AppIcons.logOut,),
+              const WDrawerItem(
+                title: 'Rewards',
+                icon: AppIcons.gift,
+              ),
+              const WDrawerItem(
+                title: 'Help',
+                icon: AppIcons.help,
+              ),
+              const WDrawerItem(
+                title: 'Contact Us',
+                icon: AppIcons.action,
+              ),
+              const WDrawerItem(
+                title: 'Privacy Policy',
+                icon: AppIcons.privacy,
+              ),
+              const WDrawerItem(
+                title: 'Logout',
+                icon: AppIcons.logOut,
+              ),
             ],
           ),
         ),

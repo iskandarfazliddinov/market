@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
-import 'package:market/presentation/ui/screens/onborading/widgets/onboarding_w.dart';
+import 'package:market/presentation/ui/widgets/w_onboarding.dart';
 import 'package:market/presentation/ui/screens/splash/widgets/dot_w.dart';
 import 'package:market/presentation/ui/screens/verifications/login_screen.dart';
 

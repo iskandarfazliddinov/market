@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../resource/app_colors.dart';
 
 class WDot extends StatelessWidget {
   final Color color;

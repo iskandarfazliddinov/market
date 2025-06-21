@@ -18,5 +18,11 @@ abstract class AppIcons{
   static const String action = '$_basePath/action.svg';
   static const String privacy = '$_basePath/privacy.svg';
   static const String logOut = '$_basePath/logout.svg';
+  static const String back = '$_basePath/back.svg';
+  static const String like = '$_basePath/like.svg';
+  static const String car = '$_basePath/car.svg';
+  static const String money = '$_basePath/money.svg';
+  static const String policy = '$_basePath/policy.svg';
+  static const String replace = '$_basePath/replace.svg';
 
 }

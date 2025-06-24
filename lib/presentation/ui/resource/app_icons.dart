@@ -26,5 +26,6 @@ abstract class AppIcons{
   static const String selectLike = '$_basePath/select_like.svg';
   static const String delete = '$_basePath/delete.svg';
   static const String attation = '$_basePath/attation.svg';
+  static const String next = '$_basePath/next.svg';
 
 }

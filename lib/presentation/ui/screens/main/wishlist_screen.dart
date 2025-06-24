@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
+import 'package:market/presentation/ui/screens/main/product_screen.dart';
+import 'package:market/presentation/ui/screens/main/widgets/w_item_arrival.dart';
+import 'package:market/presentation/ui/screens/main/widgets/w_like.dart';
 
 class WishlistScreen extends StatefulWidget {
   const WishlistScreen({super.key});
@@ -13,13 +16,55 @@ class _WishlistScreenState extends State<WishlistScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  const Text(
+        backgroundColor: AppColors.white,
+        centerTitle: true,
+        title: const Text(
           'Wishlist',
-          style: TextStyle(color: AppColors.black, fontSize: 20),
+          style: TextStyle(
+              color: AppColors.black,
+              fontSize: 22,
+              fontWeight: FontWeight.bold),
         ),
       ),
       body: Scaffold(
         backgroundColor: AppColors.white,
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 28,),
+          child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 16,
+              mainAxisSpacing: 16,
+              mainAxisExtent: 310,
+            ),
+            itemCount: 6,
+            itemBuilder: (context, index) {
+              return Stack(
+                children: [
+                  WItemArrival(
+                    url:
+                        'https://static.vecteezy.com/system/resources/previews/046/829/689/non_2x/smart-watch-isolated-on-transparent-background-png.png',
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return ProductScreen(
+                            heroIndex: index,
+                          );
+                        },
+                      ));
+                    },
+                    index: index,
+                  ),
+                  const Positioned(
+                    top: 12,
+                    right: 12,
+                    child: WLike(),
+                  ),
+                ],
+              );
+            },
+          ),
+        ),
       ),
     );
   }

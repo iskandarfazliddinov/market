@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 abstract class AppIcons{
   static const String _basePath = 'assets/icons';
@@ -24,5 +23,8 @@ abstract class AppIcons{
   static const String money = '$_basePath/money.svg';
   static const String policy = '$_basePath/policy.svg';
   static const String replace = '$_basePath/replace.svg';
+  static const String selectLike = '$_basePath/select_like.svg';
+  static const String delete = '$_basePath/delete.svg';
+  static const String attation = '$_basePath/attation.svg';
 
 }

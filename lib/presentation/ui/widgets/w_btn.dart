@@ -4,8 +4,10 @@ import 'package:market/presentation/ui/resource/app_colors.dart';
 class WBtn extends StatelessWidget {
   final VoidCallback onTap;
   final String title;
+  final Color color;
+  final double radius;
 
-  const WBtn({super.key, required this.onTap, required this.title});
+  const WBtn({super.key, required this.onTap, required this.title, this.color = AppColors.primary, this.radius = 0,});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class WBtn extends StatelessWidget {
         width: double.infinity,
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(vertical: 16),
-        decoration: const BoxDecoration(color: AppColors.primary),
+        decoration:  BoxDecoration(color: color,borderRadius: BorderRadius.circular(radius)),
         child: Text(
           title,
           style: const TextStyle(

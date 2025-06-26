@@ -6,8 +6,9 @@ class WBtn extends StatelessWidget {
   final String title;
   final Color color;
   final double radius;
+  final EdgeInsetsGeometry padding;
 
-  const WBtn({super.key, required this.onTap, required this.title, this.color = AppColors.primary, this.radius = 0,});
+  const WBtn({super.key, required this.onTap, required this.title, this.color = AppColors.primary, this.radius = 0, this.padding = const EdgeInsets.symmetric(vertical: 16),});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class WBtn extends StatelessWidget {
       child: Container(
         width: double.infinity,
         alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(vertical: 16),
+        padding: padding,
         decoration:  BoxDecoration(color: color,borderRadius: BorderRadius.circular(radius)),
         child: Text(
           title,

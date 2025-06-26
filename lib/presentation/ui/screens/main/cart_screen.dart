@@ -3,6 +3,7 @@ import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_styles.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_cart_item.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_cart_title.dart';
+import 'package:market/presentation/ui/screens/main/widgets/w_count_btn.dart';
 import 'package:market/presentation/ui/widgets/w_btn.dart';
 
 class CartScreen extends StatefulWidget {
@@ -43,7 +44,7 @@ class _CartScreenState extends State<CartScreen> {
                 itemCount: 5,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return const WCartItem();
+                  return WCartItem(btnWidget: WCountBtn(),);
                 },
               ),
               Padding(

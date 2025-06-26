@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
-import 'package:market/presentation/ui/screens/main/product_screen.dart';
+import 'package:market/presentation/ui/screens/main/screens/product_screen.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_drawer_item.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_shop.dart';

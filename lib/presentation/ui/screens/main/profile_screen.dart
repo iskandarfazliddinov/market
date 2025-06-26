@@ -4,6 +4,9 @@ import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
 import 'package:market/presentation/ui/resource/app_styles.dart';
+import 'package:market/presentation/ui/screens/main/screens/orders_screen.dart';
+import 'package:market/presentation/ui/screens/main/screens/payment_screen.dart';
+import 'package:market/presentation/ui/screens/main/screens/shipping_addresses_screen.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_account_item.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -70,14 +73,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  behavior: HitTestBehavior.opaque,
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return const OrdersScreen();
+                      },
+                    ));
+                  },
                   child: WAccountItem(
                     title: 'My Orders',
                     child: SvgPicture.asset(AppIcons.next),
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  behavior: HitTestBehavior.opaque,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PaymentScreen(),
+                      ),
+                    );
+                  },
                   child: WAccountItem(
                     title: 'Payment Method',
                     child: SvgPicture.asset(AppIcons.next),
@@ -91,7 +109,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return const ShippingAddressesScreen();
+                      },
+                    ));
+                  },
                   child: WAccountItem(
                     title: 'Shipping Addresses',
                     child: SvgPicture.asset(AppIcons.next),
@@ -99,7 +123,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 const SizedBox(height: 28),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: () {},
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(

@@ -3,12 +3,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_styles.dart';
-import 'package:market/presentation/ui/screens/main/widgets/w_count_btn.dart';
 import 'package:market/presentation/ui/widgets/w_btn.dart';
 import 'package:market/presentation/ui/widgets/w_rating.dart';
 
 class WCartItem extends StatelessWidget {
-  const WCartItem({super.key});
+  final Widget btnWidget;
+
+  const WCartItem({super.key, required this.btnWidget});
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +41,12 @@ class WCartItem extends StatelessWidget {
                       barrierDismissible: false,
                       builder: (context) {
                         return Dialog(
-
                           backgroundColor: Colors.transparent,
                           child: Container(
-                            padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 20,),
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 30,
+                              horizontal: 20,
+                            ),
                             decoration: BoxDecoration(
                               color: AppColors.white,
                               borderRadius: BorderRadius.circular(12),
@@ -108,13 +111,13 @@ class WCartItem extends StatelessWidget {
             ],
           ),
           const SizedBox(width: 20),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              WRating(
+              const WRating(
                 padding: EdgeInsets.zero,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 8.0, bottom: 6),
                 child: Text(
                   "Newest Arrival",
@@ -125,7 +128,7 @@ class WCartItem extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
+              const Text(
                 "\$120.00",
                 style: TextStyle(
                   fontFamily: "MainFont",
@@ -134,8 +137,8 @@ class WCartItem extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              SizedBox(height: 24),
-              WCountBtn()
+              const SizedBox(height: 24),
+              btnWidget,
             ],
           )
         ],

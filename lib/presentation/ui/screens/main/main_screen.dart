@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
-import 'package:market/presentation/ui/resource/app_images.dart';
 import 'package:market/presentation/ui/screens/main/cart_screen.dart';
 import 'package:market/presentation/ui/screens/main/home_screen.dart';
-import 'package:market/presentation/ui/screens/main/product_screen.dart';
 import 'package:market/presentation/ui/screens/main/profile_screen.dart';
-import 'package:market/presentation/ui/screens/main/widgets/w_drawer_item.dart';
-import 'package:market/presentation/ui/screens/main/widgets/w_item_arrival.dart';
-import 'package:market/presentation/ui/screens/main/widgets/w_item_shop.dart';
-import 'package:market/presentation/ui/screens/main/wishlist_screen.dart';
+ximport 'package:market/presentation/ui/screens/main/wishlist_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -23,12 +18,19 @@ class _MainScreenState extends State<MainScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
+  int _selectedIndex = 0;
+
   @override
   void initState() {
     _tabController = TabController(
       length: 4, // Number of tabs
       vsync: this,
     );
+    _tabController.addListener((){
+      setState(() {
+        _selectedIndex = _tabController.index;
+      });
+    });
     super.initState();
   }
 
@@ -71,21 +73,24 @@ class _MainScreenState extends State<MainScreen>
               labelPadding: EdgeInsets.zero,
               dividerColor: Colors.transparent,
               controller: _tabController,
-              onTap: (i) {
-
+              onTap: (index) {
+                print(index);
+                setState(() {
+                  _selectedIndex = index;
+                });
               },
               tabs: [
                 Tab(
-                  child: SvgPicture.asset(AppIcons.home),
+                  child: SvgPicture.asset(_selectedIndex == 0 ? AppIcons.homeSelected:AppIcons.home),
                 ),
                 Tab(
-                  child: SvgPicture.asset(AppIcons.wishlist),
+                  child: SvgPicture.asset(_selectedIndex == 1? AppIcons.wishlistSelected:AppIcons.wishlist),
                 ),
                 Tab(
-                  child: SvgPicture.asset(AppIcons.cart),
+                  child: SvgPicture.asset(_selectedIndex == 2?AppIcons.cartSelected:AppIcons.cart),
                 ),
                 Tab(
-                  child: SvgPicture.asset(AppIcons.account),
+                  child: SvgPicture.asset(_selectedIndex == 3?AppIcons.accountSelected :AppIcons.account),
                 ),
               ]),
         ),

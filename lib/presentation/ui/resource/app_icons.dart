@@ -27,5 +27,9 @@ abstract class AppIcons{
   static const String delete = '$_basePath/delete.svg';
   static const String attation = '$_basePath/attation.svg';
   static const String next = '$_basePath/next.svg';
+  static const String accountSelected = '$_basePath/account_selected.svg';
+  static const String cartSelected = '$_basePath/cart_selected.svg';
+  static const String homeSelected = '$_basePath/home_selected.svg';
+  static const String wishlistSelected = '$_basePath/wishlist_selected.svg';
 
 }

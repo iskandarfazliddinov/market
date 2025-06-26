@@ -5,6 +5,7 @@ import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
 import 'package:market/presentation/ui/resource/app_styles.dart';
 import 'package:market/presentation/ui/widgets/w_btn.dart';
+import 'package:market/presentation/ui/widgets/w_dialog_delete.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
@@ -142,14 +143,15 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               keyboardType: TextInputType.number,
                               decoration: InputDecoration(
                                   hintText: "09/28",
-                                  hintStyle:
-                                  AppStyles.getTextStyle(color: AppColors.grey),
+                                  hintStyle: AppStyles.getTextStyle(
+                                      color: AppColors.grey),
                                   enabledBorder: const OutlineInputBorder(
-                                      borderSide: BorderSide(color: AppColors.grey)),
+                                      borderSide:
+                                          BorderSide(color: AppColors.grey)),
                                   border: const OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: AppColors.grey,
-                                      ))),
+                                    color: AppColors.grey,
+                                  ))),
                             )
                           ],
                         ),
@@ -174,14 +176,15 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               keyboardType: TextInputType.number,
                               decoration: InputDecoration(
                                   hintText: "235",
-                                  hintStyle:
-                                  AppStyles.getTextStyle(color: AppColors.grey),
+                                  hintStyle: AppStyles.getTextStyle(
+                                      color: AppColors.grey),
                                   enabledBorder: const OutlineInputBorder(
-                                      borderSide: BorderSide(color: AppColors.grey)),
+                                      borderSide:
+                                          BorderSide(color: AppColors.grey)),
                                   border: const OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: AppColors.grey,
-                                      ))),
+                                    color: AppColors.grey,
+                                  ))),
                             )
                           ],
                         ),
@@ -191,9 +194,31 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   const SizedBox(height: 30),
                   Row(
                     children: [
-                      Expanded(child: WBtn(onTap: (){}, title: "Delete Card",),),
+                      Expanded(
+                        child: WBtn(
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return const WDialogDelete(
+                                  title: 'Delete this Card?',
+                                  description:
+                                      'Do you want to delete this card?',
+                                );
+                              },
+                            );
+                          },
+                          title: "Delete Card",
+                        ),
+                      ),
                       const SizedBox(width: 30),
-                      Expanded(child: WBtn(onTap: (){}, title: "+ Add Card",color: AppColors.yellow,),)
+                      Expanded(
+                        child: WBtn(
+                          onTap: () {},
+                          title: "+ Add Card",
+                          color: AppColors.yellow,
+                        ),
+                      )
                     ],
                   )
                 ],

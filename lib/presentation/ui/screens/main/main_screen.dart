@@ -5,7 +5,7 @@ import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/screens/main/cart_screen.dart';
 import 'package:market/presentation/ui/screens/main/home_screen.dart';
 import 'package:market/presentation/ui/screens/main/profile_screen.dart';
-ximport 'package:market/presentation/ui/screens/main/wishlist_screen.dart';
+import 'package:market/presentation/ui/screens/main/wishlist_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

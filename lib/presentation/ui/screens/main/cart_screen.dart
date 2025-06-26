@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
+import 'package:market/presentation/ui/resource/app_styles.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_cart_item.dart';
+import 'package:market/presentation/ui/screens/main/widgets/w_cart_title.dart';
+import 'package:market/presentation/ui/widgets/w_btn.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -26,11 +29,66 @@ class _CartScreenState extends State<CartScreen> {
         ),
       ),
       backgroundColor: AppColors.white,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 28,),
-        child: ListView.builder(itemBuilder: (context, index) {
-          return const WCartItem();
-        },),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 28,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: 5,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return const WCartItem();
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30,bottom: 50,),
+                child: TextField(
+                  decoration: InputDecoration(
+                      label: Text(
+                        "Promocodes",
+                        style: AppStyles.getTextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      suffixIcon: GestureDetector(
+                        onTap: (){},
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            "Apply",
+                            style: AppStyles.getTextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.primary,
+                            ),
+                          ),
+                        ),
+                      ),
+                      border: const OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Text("Order Info",style: AppStyles.getTextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+              ),
+              const WCartTitle(title: 'Subtotal', subtitle: '\$890.00',),
+              const Padding(
+                padding: EdgeInsets.only(top: 12,bottom: 16,),
+                child: WCartTitle(title: 'Shipping Charge', subtitle: '+ \$10.00',),
+              ),
+              const WCartTitle(title: 'Total', subtitle: '\$900.00',colorSubTitle: AppColors.primary,),
+              Padding(
+                padding: const EdgeInsets.only(top: 50),
+                child: WBtn(onTap: (){}, title: "Checkout"),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

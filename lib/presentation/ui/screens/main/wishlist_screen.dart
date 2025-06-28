@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/screens/main/screens/product_screen.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_like.dart';
 
+@RoutePage()
 class WishlistScreen extends StatefulWidget {
   const WishlistScreen({super.key});
 

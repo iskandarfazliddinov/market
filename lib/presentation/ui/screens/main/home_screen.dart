@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
@@ -8,6 +9,7 @@ import 'package:market/presentation/ui/screens/main/widgets/w_drawer_item.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_shop.dart';
 
+@RoutePage()
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 

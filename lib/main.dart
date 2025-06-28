@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:market/presentation/ui/screens/splash/splash_screen.dart';
+import 'package:market/presentation/routes/router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final _router = AppRouter();
+
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _router.config(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: const SplashScreen(),
     );
   }
 }

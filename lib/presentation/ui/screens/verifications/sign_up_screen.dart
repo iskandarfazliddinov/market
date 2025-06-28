@@ -1,10 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
-import 'package:market/presentation/ui/screens/verifications/forgot_password_screen.dart';
 import 'package:market/presentation/ui/widgets/w_btn.dart';
 
+@RoutePage()
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
 

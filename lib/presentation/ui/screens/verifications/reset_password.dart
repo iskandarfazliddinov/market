@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
 import 'package:market/presentation/ui/widgets/w_btn.dart';
 
+@RoutePage()
 class ResetPassword extends StatefulWidget {
   const ResetPassword({super.key});
 

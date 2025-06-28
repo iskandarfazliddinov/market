@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
@@ -7,6 +8,7 @@ import 'package:market/presentation/ui/resource/app_styles.dart';
 import 'package:market/presentation/ui/widgets/w_btn.dart';
 import 'package:market/presentation/ui/widgets/w_dialog_delete.dart';
 
+@RoutePage()
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
 

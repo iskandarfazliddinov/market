@@ -1,14 +1,16 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:market/presentation/routes/router.gr.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
 import 'package:market/presentation/ui/resource/app_styles.dart';
-import 'package:market/presentation/ui/screens/main/screens/orders_screen.dart';
 import 'package:market/presentation/ui/screens/main/screens/payment_screen.dart';
 import 'package:market/presentation/ui/screens/main/screens/shipping_addresses_screen.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_account_item.dart';
 
+@RoutePage()
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
@@ -75,11 +77,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 GestureDetector(
                   behavior: HitTestBehavior.opaque,
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const OrdersScreen();
-                      },
-                    ));
+                    context.router.push(const OrdersRoute());
                   },
                   child: WAccountItem(
                     title: 'My Orders',

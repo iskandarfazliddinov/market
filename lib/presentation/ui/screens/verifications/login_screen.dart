@@ -1,15 +1,17 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:market/presentation/routes/router.gr.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
-import 'package:market/presentation/ui/screens/main/main_screen.dart';
 import 'package:market/presentation/ui/screens/verifications/forgot_password_screen.dart';
 import 'package:market/presentation/ui/screens/verifications/sign_up_screen.dart';
 import 'package:market/presentation/ui/screens/verifications/widgets/w_outline_btn.dart';
 
 import '../../widgets/w_btn.dart';
 
+@RoutePage()
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -95,12 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   WBtn(
                     onTap: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MainScreen(),
-                        ),
-                      );
+                      context.router.replaceAll([const MainRoute()]);
                     },
                     title: 'Login',
                   ),

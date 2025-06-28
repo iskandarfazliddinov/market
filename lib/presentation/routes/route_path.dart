@@ -3,6 +3,7 @@ class RoutePath {
   static const String main = "/main";
   static const String login = "/login";
   static const String onboarding = "/onboarding";
+  static const String product = "/product";
 
 
   static const String home = "home";

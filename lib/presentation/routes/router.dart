@@ -64,7 +64,7 @@ class AppRouter extends $AppRouter {
                 AutoRoute(
                   page: CartRoute.page,
                   path: '',
-                )
+                ),
               ],
             ),
             AutoRoute(
@@ -93,6 +93,10 @@ class AppRouter extends $AppRouter {
         AutoRoute(
           page: ProductRoute.page,
           path: RoutePath.product,
-        )
+        ),
+        AutoRoute(
+          page: DeliveryInfoRoute.page,
+          path: RoutePath.deliveryInfo,
+        ),
       ];
 }

@@ -4,6 +4,7 @@ class RoutePath {
   static const String login = "/login";
   static const String onboarding = "/onboarding";
   static const String product = "/product";
+  static const String deliveryInfo = "/delivery_info";
 
 
   static const String home = "home";

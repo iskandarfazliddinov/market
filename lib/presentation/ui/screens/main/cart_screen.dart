@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:market/presentation/routes/router.gr.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_styles.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_cart_item.dart';
@@ -46,11 +47,16 @@ class _CartScreenState extends State<CartScreen> {
                 itemCount: 5,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return WCartItem(btnWidget: WCountBtn(),);
+                  return WCartItem(
+                    btnWidget: WCountBtn(),
+                  );
                 },
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30,bottom: 50,),
+                padding: const EdgeInsets.only(
+                  top: 30,
+                  bottom: 50,
+                ),
                 child: TextField(
                   decoration: InputDecoration(
                       label: Text(
@@ -60,7 +66,7 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                       ),
                       suffixIcon: GestureDetector(
-                        onTap: (){},
+                        onTap: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(16.0),
                           child: Text(
@@ -77,17 +83,41 @@ class _CartScreenState extends State<CartScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: Text("Order Info",style: AppStyles.getTextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                child: Text(
+                  "Order Info",
+                  style: AppStyles.getTextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
               ),
-              const WCartTitle(title: 'Subtotal', subtitle: '\$890.00',),
+              const WCartTitle(
+                title: 'Subtotal',
+                subtitle: '\$890.00',
+              ),
               const Padding(
-                padding: EdgeInsets.only(top: 12,bottom: 16,),
-                child: WCartTitle(title: 'Shipping Charge', subtitle: '+ \$10.00',),
+                padding: EdgeInsets.only(
+                  top: 12,
+                  bottom: 16,
+                ),
+                child: WCartTitle(
+                  title: 'Shipping Charge',
+                  subtitle: '+ \$10.00',
+                ),
               ),
-              const WCartTitle(title: 'Total', subtitle: '\$900.00',colorSubTitle: AppColors.primary,),
+              const WCartTitle(
+                title: 'Total',
+                subtitle: '\$900.00',
+                colorSubTitle: AppColors.primary,
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 50),
-                child: WBtn(onTap: (){}, title: "Checkout"),
+                child: WBtn(
+                  onTap: () {
+                    context.router.pushAll([const DeliveryInfoRoute()]);
+                  },
+                  title: "Checkout",
+                ),
               )
             ],
           ),

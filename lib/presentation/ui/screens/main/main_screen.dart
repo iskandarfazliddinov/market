@@ -4,6 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/presentation/routes/router.gr.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
+import 'package:market/presentation/ui/resource/app_images.dart';
+import 'package:market/presentation/ui/screens/main/widgets/w_drawer_item.dart';
+
+final GlobalKey<ScaffoldState> scaffoldKeyMain = GlobalKey<ScaffoldState>();
 
 @RoutePage()
 class MainScreen extends StatefulWidget {
@@ -28,6 +32,65 @@ class _MainScreenState extends State<MainScreen> {
         final currentIndex = tabsRouter.activeIndex;
 
         return Scaffold(
+          key: scaffoldKeyMain,
+          drawer: Drawer(
+            backgroundColor: AppColors.white,
+            child: ListView(
+              children: [
+                SvgPicture.asset(
+                  AppImages.logo,
+                  width: 100,
+                ),
+                const SizedBox(height: 28),
+                const Align(
+                  alignment: Alignment.center,
+                  child: Text.rich(TextSpan(
+                      text: "Swip",
+                      style: TextStyle(
+                        color: AppColors.primary,
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      children: [
+                        TextSpan(
+                            text: "wide",
+                            style: TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF000000),
+                            ))
+                      ])),
+                ),
+                const Padding(
+                  padding:
+                  EdgeInsets.only(left: 30, right: 30, top: 40, bottom: 40),
+                  child: Divider(
+                    color: AppColors.grey,
+                  ),
+                ),
+                const WDrawerItem(
+                  title: 'Rewards',
+                  icon: AppIcons.gift,
+                ),
+                const WDrawerItem(
+                  title: 'Help',
+                  icon: AppIcons.help,
+                ),
+                const WDrawerItem(
+                  title: 'Contact Us',
+                  icon: AppIcons.action,
+                ),
+                const WDrawerItem(
+                  title: 'Privacy Policy',
+                  icon: AppIcons.privacy,
+                ),
+                const WDrawerItem(
+                  title: 'Logout',
+                  icon: AppIcons.logOut,
+                ),
+              ],
+            ),
+          ),
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
               splashColor: Colors.transparent,

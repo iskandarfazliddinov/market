@@ -5,7 +5,7 @@ import 'package:market/presentation/routes/router.gr.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_images.dart';
-import 'package:market/presentation/ui/screens/main/widgets/w_drawer_item.dart';
+import 'package:market/presentation/ui/screens/main/main_screen.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_item_shop.dart';
 
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               GestureDetector(
                 onTap: () {
-                  _scaffoldKey.currentState!.openDrawer();
+                  scaffoldKeyMain.currentState!.openDrawer();
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
@@ -192,64 +192,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-            ],
-          ),
-        ),
-        drawer: Drawer(
-          backgroundColor: AppColors.white,
-          child: ListView(
-            children: [
-              SvgPicture.asset(
-                AppImages.logo,
-                width: 100,
-              ),
-              const SizedBox(height: 28),
-              const Align(
-                alignment: Alignment.center,
-                child: Text.rich(TextSpan(
-                    text: "Swip",
-                    style: TextStyle(
-                      color: AppColors.primary,
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    children: [
-                      TextSpan(
-                          text: "wide",
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF000000),
-                          ))
-                    ])),
-              ),
-              const Padding(
-                padding:
-                EdgeInsets.only(left: 30, right: 30, top: 40, bottom: 40),
-                child: Divider(
-                  color: AppColors.grey,
-                ),
-              ),
-              const WDrawerItem(
-                title: 'Rewards',
-                icon: AppIcons.gift,
-              ),
-              const WDrawerItem(
-                title: 'Help',
-                icon: AppIcons.help,
-              ),
-              const WDrawerItem(
-                title: 'Contact Us',
-                icon: AppIcons.action,
-              ),
-              const WDrawerItem(
-                title: 'Privacy Policy',
-                icon: AppIcons.privacy,
-              ),
-              const WDrawerItem(
-                title: 'Logout',
-                icon: AppIcons.logOut,
-              ),
             ],
           ),
         ),

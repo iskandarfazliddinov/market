@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:market/presentation/routes/router.gr.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_cart_item.dart';
@@ -69,7 +70,9 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       width: 130,
                       child: WBtn(
                         padding: const EdgeInsets.symmetric(vertical: 10),
-                        onTap: () {},
+                        onTap: () {
+                          context.router.push(const TrackOrderRoute());
+                        },
                         title: "Track Order",
                       ),
                     ),

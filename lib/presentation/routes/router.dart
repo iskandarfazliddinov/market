@@ -79,10 +79,17 @@ class AppRouter extends $AppRouter {
                   page: OrdersRoute.page,
                   path: RoutePath.order,
                 ),
+                AutoRoute(
+                  page: TrackOrderRoute.page,
+                  path: RoutePath.order,
+                ),
               ],
             ),
           ],
         ),
+        // ===============
+        //    Product
+        // ===============
         AutoRoute(
           page: ProductRoute.page,
           path: RoutePath.product,

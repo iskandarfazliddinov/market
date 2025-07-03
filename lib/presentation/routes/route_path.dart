@@ -6,6 +6,7 @@ class RoutePath {
   static const String product = "/product";
   static const String deliveryInfo = "/delivery_info";
   static const String paymentMethod = "/payment_method";
+  static const String checkOut = "/check_out";
 
 
   static const String home = "home";

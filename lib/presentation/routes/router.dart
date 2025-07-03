@@ -108,5 +108,12 @@ class AppRouter extends $AppRouter {
           page: PaymentMethodRoute.page,
           path: RoutePath.paymentMethod,
         ),
+        // ===============
+        //   Checkout
+        // ===============
+        AutoRoute(
+          page: CheckOutRoute.page,
+          path: RoutePath.checkOut,
+        ),
       ];
 }

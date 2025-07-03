@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:market/presentation/routes/router.gr.dart';
 import 'package:market/presentation/ui/resource/app_colors.dart';
 import 'package:market/presentation/ui/resource/app_icons.dart';
 import 'package:market/presentation/ui/resource/app_styles.dart';
@@ -60,7 +61,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 28,vertical: 16,),
             child: WBtn(
               onTap: () {
-                // context.router.pushAll([const PaymentMethodRoute()]);
+                context.router.pushAll([const CheckOutRoute()]);
               },
               title: "Checkout",
             ),

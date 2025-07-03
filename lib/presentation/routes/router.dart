@@ -94,9 +94,19 @@ class AppRouter extends $AppRouter {
           page: ProductRoute.page,
           path: RoutePath.product,
         ),
+        // ===============
+        //    Delivery Info
+        // ===============
         AutoRoute(
           page: DeliveryInfoRoute.page,
           path: RoutePath.deliveryInfo,
+        ),
+        // ===============
+        //    Payment Method
+        // ===============
+        AutoRoute(
+          page: PaymentMethodRoute.page,
+          path: RoutePath.paymentMethod,
         ),
       ];
 }

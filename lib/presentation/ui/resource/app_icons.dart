@@ -32,5 +32,6 @@ abstract class AppIcons{
   static const String homeSelected = '$_basePath/home_selected.svg';
   static const String wishlistSelected = '$_basePath/wishlist_selected.svg';
   static const String line = '$_basePath/line.svg';
+  static const String card = '$_basePath/card.svg';
 
 }

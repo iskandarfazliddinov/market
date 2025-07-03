@@ -6,13 +6,20 @@ class WDeliveryInfo extends StatelessWidget {
   final String name;
   final String address;
   final String phone;
+  final bool isFullWidth;
 
-  const WDeliveryInfo({super.key, this.name = '', this.address= '', this.phone='',});
+  const WDeliveryInfo({
+    super.key,
+    this.name = '',
+    this.address = '',
+    this.phone = '',
+    this.isFullWidth = false,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 230,
+      width: isFullWidth ? MediaQuery.of(context).size.width:230,
       height: 180,
       margin: const EdgeInsets.only(right: 20),
       padding: const EdgeInsets.only(
@@ -52,10 +59,12 @@ class WDeliveryInfo extends StatelessWidget {
               style: AppStyles.getTextStyle(),
             ),
           ),
-          phone.isNotEmpty?Text(
-            phone,
-            style: AppStyles.getTextStyle(),
-          ):const SizedBox()
+          phone.isNotEmpty
+              ? Text(
+                  phone,
+                  style: AppStyles.getTextStyle(),
+                )
+              : const SizedBox()
         ],
       ),
     );

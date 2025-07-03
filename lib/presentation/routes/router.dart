@@ -115,5 +115,12 @@ class AppRouter extends $AppRouter {
           page: CheckOutRoute.page,
           path: RoutePath.checkOut,
         ),
+        // ===============
+        //   Verification Code
+        // ===============
+        AutoRoute(
+          page: VerificationCodeRoute.page,
+          path: RoutePath.verificationCode,
+        ),
       ];
 }

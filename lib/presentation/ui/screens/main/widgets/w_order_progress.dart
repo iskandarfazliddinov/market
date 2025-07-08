@@ -42,7 +42,7 @@ class WOrderProgress extends StatelessWidget {
         Expanded(
           child: Text(
             text,
-            style: AppStyles.getTextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontWeight: FontWeight.bold,
               color: isActive? AppColors.black : AppColors.grey,
               fontSize: 18,

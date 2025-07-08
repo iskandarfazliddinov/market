@@ -22,17 +22,17 @@ class _CartScreenState extends State<CartScreen> {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'Shopping Cart',
-          style: TextStyle(
-              color: AppColors.black,
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              
               fontSize: 22,
               fontWeight: FontWeight.bold),
         ),
       ),
-      backgroundColor: AppColors.white,
+      
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(
@@ -61,7 +61,7 @@ class _CartScreenState extends State<CartScreen> {
                   decoration: InputDecoration(
                       label: Text(
                         "Promocodes",
-                        style: AppStyles.getTextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -71,7 +71,7 @@ class _CartScreenState extends State<CartScreen> {
                           padding: const EdgeInsets.all(16.0),
                           child: Text(
                             "Apply",
-                            style: AppStyles.getTextStyle(
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary,
                             ),
@@ -85,7 +85,7 @@ class _CartScreenState extends State<CartScreen> {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Text(
                   "Order Info",
-                  style: AppStyles.getTextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),

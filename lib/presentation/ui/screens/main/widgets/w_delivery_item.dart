@@ -19,7 +19,7 @@ class WDeliveryItem extends StatelessWidget {
           padding: const EdgeInsets.only(top: 30,bottom: 20,),
           child: Text(
             title,
-            style: AppStyles.getTextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontWeight: FontWeight.bold,
               fontSize: 20,
             ),

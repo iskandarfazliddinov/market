@@ -29,38 +29,38 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     AppImages.logo,
                     width: 90,
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(top: 30, bottom: 8),
                     child: Text(
                       "Forget",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: AppColors.black,
+                          
                           fontSize: 32),
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Forget your password",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18),
                   ),
                 ],
               ),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     """Please enter your email address below
 you will receive a link to create a new 
 password via email""",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
 
-                      color: AppColors.black,
+                      
                       fontSize: 18,
                     ),
                     textAlign: TextAlign.start,
                   ),
-                  SizedBox(height: 60),
-                  TextField(
+                  const SizedBox(height: 60),
+                  const TextField(
                     keyboardType: TextInputType.emailAddress,
                     maxLines: 1,
                     obscureText: true,

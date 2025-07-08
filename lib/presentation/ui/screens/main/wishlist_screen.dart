@@ -18,18 +18,18 @@ class _WishlistScreenState extends State<WishlistScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
-        title: const Text(
+        title:  Text(
           'Wishlist',
-          style: TextStyle(
-              color: AppColors.black,
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              
               fontSize: 22,
               fontWeight: FontWeight.bold),
         ),
       ),
       body: Scaffold(
-        backgroundColor: AppColors.white,
+        
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 28,),
           child: GridView.builder(

@@ -17,9 +17,9 @@ class WOnBoarding extends StatelessWidget {
         const SizedBox(height: 100),
         Text(
           title,
-          style: const TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             fontSize: 26,
-            color: AppColors.black,
+            
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -29,7 +29,7 @@ class WOnBoarding extends StatelessWidget {
           child: Text(
             textAlign: TextAlign.center,
             description,
-            style: const TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontSize: 18,
               color: AppColors.grey,
             ),

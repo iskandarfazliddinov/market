@@ -29,20 +29,19 @@ class WItemArrival extends StatelessWidget {
             ),
           ),
           const WRating(),
-          const Padding(
-            padding: EdgeInsets.only(top: 8.0, bottom: 6),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0, bottom: 6),
             child: Text(
               "Newest Arrival",
-              style: TextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.bold,
-                color: AppColors.black,
                 fontSize: 16,
               ),
             ),
           ),
-          const Text(
+           Text(
             "\$120.00",
-            style: TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontFamily: "MainFont",
               fontWeight: FontWeight.bold,
               color: AppColors.primary,

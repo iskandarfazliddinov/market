@@ -21,11 +21,11 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      
       appBar: AppBar(
         forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -40,10 +40,10 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                   AppIcons.back,
                 ),
               ),
-              const Text(
+               Text(
                 'Track Order',
-                style: TextStyle(
-                    color: AppColors.black,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    
                     fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),
@@ -80,7 +80,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      const Column(
+                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -91,16 +91,16 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                             padding: EdgeInsets.only(top: 8.0, bottom: 6),
                             child: Text(
                               "Newest Arrival",
-                              style: TextStyle(
+                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                 fontWeight: FontWeight.bold,
-                                color: AppColors.black,
+                                
                                 fontSize: 20,
                               ),
                             ),
                           ),
                           Text(
                             "\$120.00",
-                            style: TextStyle(
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontFamily: "MainFont",
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary,
@@ -139,7 +139,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                   ),
                   Text(
                     "Delivery Information :",
-                    style: AppStyles.getTextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -160,7 +160,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                       children: [
                         Text(
                           "Saul Goodmate",
-                          style: AppStyles.getTextStyle(
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                           ),
@@ -169,19 +169,19 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                           padding: const EdgeInsets.only(top: 12,bottom: 16,),
                           child: Text(
                             """16 E Birch Hill Road Fairbanks, NY, 99312 United States""",
-                            style: AppStyles.getTextStyle(),
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(),
                           ),
                         ),
                         Text(
                           "865-5585 57587",
-                          style: AppStyles.getTextStyle(),
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(),
                         ),
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
-                    child: Text("Order Info",style: AppStyles.getTextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                    child: Text("Order Info",style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold,fontSize: 20,),),
                   ),
                   const WCartTitle(title: 'Subtotal', subtitle: '\$890.00',),
                   const Padding(

@@ -23,11 +23,11 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      
       appBar: AppBar(
         forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -42,10 +42,10 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                   AppIcons.back,
                 ),
               ),
-              const Text(
+               Text(
                 'Payment Method',
-                style: TextStyle(
-                    color: AppColors.black,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    
                     fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),
@@ -82,7 +82,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                     padding: const EdgeInsets.only(top: 28,bottom: 16,),
                     child: Text(
                       "Delivery Information :",
-                      style: AppStyles.getTextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
@@ -98,7 +98,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                     padding: const EdgeInsets.only(top: 60,bottom: 20,),
                     child: Text(
                       "Payment Method :",
-                      style: AppStyles.getTextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),

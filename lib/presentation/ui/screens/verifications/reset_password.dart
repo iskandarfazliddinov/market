@@ -29,34 +29,34 @@ class _ResetPasswordState extends State<ResetPassword> {
                     AppImages.logo,
                     width: 90,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 30, bottom: 8),
+                   Padding(
+                    padding: const EdgeInsets.only(top: 30, bottom: 8),
                     child: Text(
                       "Reset",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: AppColors.black,
+                          
                           fontSize: 32),
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Reset your password",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18),
                   ),
                 ],
               ),
-              const Column(
+               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Enter Your New Password",
-                    style: TextStyle(
-                        color: AppColors.black,
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        
                         fontSize: 18,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.start,
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(vertical: 32),
                     child: TextField(
                       keyboardType: TextInputType.visiblePassword,

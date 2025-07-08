@@ -38,7 +38,7 @@ class WDeliveryInfo extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: AppStyles.getTextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
@@ -56,13 +56,13 @@ class WDeliveryInfo extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 12),
             child: Text(
               address,
-              style: AppStyles.getTextStyle(),
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(),
             ),
           ),
           phone.isNotEmpty
               ? Text(
                   phone,
-                  style: AppStyles.getTextStyle(),
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(),
                 )
               : const SizedBox()
         ],

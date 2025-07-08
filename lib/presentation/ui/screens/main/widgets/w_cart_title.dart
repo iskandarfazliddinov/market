@@ -14,8 +14,8 @@ class WCartTitle extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title,style: AppStyles.getTextStyle(fontSize: 18,color: AppColors.grey,fontWeight: FontWeight.bold),),
-        Text(subtitle,style: AppStyles.getTextStyle(fontSize: 18,color: colorSubTitle,fontWeight: FontWeight.bold),),
+        Text(title,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 18,color: AppColors.grey,fontWeight: FontWeight.bold),),
+        Text(subtitle,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 18,color: colorSubTitle,fontWeight: FontWeight.bold),),
       ],
     );
   }

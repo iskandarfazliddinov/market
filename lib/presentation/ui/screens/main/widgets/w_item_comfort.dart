@@ -14,7 +14,7 @@ class WItemComfort extends StatelessWidget {
       children: [
         SvgPicture.asset(icon),
         const SizedBox(height: 12),
-        Text(title,style: AppStyles.getTextStyle(fontWeight: FontWeight.bold,fontSize: 18,),)
+        Text(title,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold,fontSize: 18,),)
       ],
     );
   }

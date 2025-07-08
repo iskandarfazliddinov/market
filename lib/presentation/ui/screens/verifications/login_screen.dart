@@ -35,19 +35,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     AppImages.logo,
                     width: 90,
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(bottom: 30, top: 8),
                     child: Text(
                       "Welcome Back",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: AppColors.black,
+                          
                           fontSize: 32),
                     ),
                   ),
-                  const Text(
+                   Text(
                     "Login to your account",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18),
                   ),
                 ],
               ),
@@ -85,9 +85,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                           ));
                         },
-                        child: const Text(
+                        child: Text(
                           "Forget Password ?",
-                          style: TextStyle(
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontSize: 16,
                               color: AppColors.primary,
                               fontWeight: FontWeight.bold),
@@ -101,11 +101,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     title: 'Login',
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.symmetric(vertical: 40),
                     child: Text(
                       "Or",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.grey,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -143,9 +143,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                         ));
                       },
-                      child: const Text(
+                      child: Text(
                         " Sign Up",
-                        style: TextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary,
                           fontSize: 18,
@@ -154,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ))
                   ],
                   text: "Don’t have an account?",
-                  style: const TextStyle(
+                  style:  Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: AppColors.grey,
                     fontSize: 18,

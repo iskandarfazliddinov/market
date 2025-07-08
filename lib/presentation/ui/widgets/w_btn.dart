@@ -21,7 +21,7 @@ class WBtn extends StatelessWidget {
         decoration:  BoxDecoration(color: color,borderRadius: BorderRadius.circular(radius)),
         child: Text(
           title,
-          style: const TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             color: AppColors.white,
             fontSize: 18,
             fontWeight: FontWeight.bold,

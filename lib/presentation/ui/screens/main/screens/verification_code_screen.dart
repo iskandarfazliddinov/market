@@ -18,11 +18,11 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      
       appBar: AppBar(
         forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -37,10 +37,10 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                   AppIcons.back,
                 ),
               ),
-              const Text(
+               Text(
                 'Verification Code',
-                style: TextStyle(
-                    color: AppColors.black,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    
                     fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),
@@ -62,7 +62,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
             ),
             Text(
               "OTP Verification",
-              style: AppStyles.getTextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
@@ -70,7 +70,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
             const SizedBox(height: 64),
             Text(
               "We have sent OTP on your number",
-              style: AppStyles.getTextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -92,7 +92,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
             Text.rich(
               TextSpan(
                 text: "Don’t receive a OTP? ",
-                style: AppStyles.getTextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
                 children: [
@@ -102,7 +102,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                       onTap: () {},
                       child: Text(
                         "Resend OTP",
-                        style: AppStyles.getTextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary,
                         ),

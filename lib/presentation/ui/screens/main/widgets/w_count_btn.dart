@@ -35,7 +35,7 @@ class _WCountBtnState extends State<WCountBtn> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
-          child: Text("$count",style: AppStyles.getTextStyle(),),
+          child: Text("$count",style: Theme.of(context).textTheme.bodyLarge?.copyWith(),),
         ),
         GestureDetector(
           onTap: (){

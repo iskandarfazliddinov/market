@@ -37,7 +37,7 @@ class _ProductScreenState extends State<ProductScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.white,
+        
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: SingleChildScrollView(
@@ -114,14 +114,14 @@ class _ProductScreenState extends State<ProductScreen> {
                   children: [
                     Text(
                       "Smart Watches",
-                      style: AppStyles.getTextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       "\$120.00",
-                      style: AppStyles.getTextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontSize: 20,
                         color: AppColors.primary,
                         fontWeight: FontWeight.bold,
@@ -136,7 +136,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     const WRating(),
                     Text(
                       "Available in stock",
-                      style: AppStyles.getTextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontSize: 16,
                           color: AppColors.green,
                           fontWeight: FontWeight.bold),
@@ -152,7 +152,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
                 Text(
                   "Color Variant",
-                  style: AppStyles.getTextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -237,7 +237,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
                 Text(
                   "About this item",
-                  style: AppStyles.getTextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -249,7 +249,7 @@ class _ProductScreenState extends State<ProductScreen> {
 ssimos ducimus qui blanditiis praesentium 
 voluptatum deleniti atque corrupti quos do
 lores et quas molestias excepturi...""",
-                    style: AppStyles.getTextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 16,
                       color: AppColors.grey,
                       fontWeight: FontWeight.w600,

@@ -15,8 +15,8 @@ class WTitle extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text("$title : ",style: AppStyles.getTextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
-          Text(subtitle,style: AppStyles.getTextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: AppColors.grey,),)
+          Text("$title : ",style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 18,fontWeight: FontWeight.bold,),),
+          Text(subtitle,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 18,fontWeight: FontWeight.bold,color: AppColors.grey,),)
         ],
       ),
     );

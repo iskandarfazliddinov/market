@@ -30,8 +30,8 @@ class WItemShop extends StatelessWidget {
           ),
           Text(
             title,
-            style: const TextStyle(
-              color: AppColors.black,
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              
               fontWeight: FontWeight.bold,
               fontSize: 16,
             ),

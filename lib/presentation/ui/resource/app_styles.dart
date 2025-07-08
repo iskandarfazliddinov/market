@@ -5,7 +5,7 @@ import 'app_colors.dart';
 abstract class AppStyles {
   AppStyles._();
 
-  static TextStyle getTextStyle({
+ static TextStyle getStyleMain({
     Color color = AppColors.black,
     double fontSize = 16,
     FontWeight fontWeight = FontWeight.w400,

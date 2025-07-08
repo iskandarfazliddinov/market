@@ -38,15 +38,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     context.router.pushAll([const LoginRoute()]);
                   }
                 },
-                child: const Padding(
-                  padding: EdgeInsets.only(
+                child:  Padding(
+                  padding: const EdgeInsets.only(
                     top: 24,
                     bottom: 84,
                     right: 20,
                   ),
                   child: Text(
                     "Next",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.primary,
                         fontSize: 18,
                         fontWeight: FontWeight.bold),

@@ -32,7 +32,7 @@ class WDialogDelete extends StatelessWidget {
             Text(
               title,
               textAlign: TextAlign.center,
-              style: AppStyles.getTextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
               ),
@@ -41,7 +41,7 @@ class WDialogDelete extends StatelessWidget {
             Text(
               description,
               textAlign: TextAlign.center,
-              style: AppStyles.getTextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: 18,
                 color: AppColors.grey,
               ),

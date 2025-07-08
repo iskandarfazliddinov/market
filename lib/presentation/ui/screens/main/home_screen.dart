@@ -28,11 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
       },
       child: Scaffold(
         key: _scaffoldKey,
-        backgroundColor: AppColors.white,
+        
         appBar: AppBar(
           automaticallyImplyLeading: false,
           forceMaterialTransparency: true,
-          backgroundColor: AppColors.white,
+          
           centerTitle: true,
           actions: [
             Padding(
@@ -55,12 +55,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: SvgPicture.asset(AppIcons.menu),
                 ),
               ),
-              const Padding(
+               Padding(
                 padding: EdgeInsets.only(left: 40),
                 child: Text.rich(
                   TextSpan(
                     text: "Swip",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: AppColors.primary,
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       TextSpan(
                           text: "wide",
-                          style: TextStyle(
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF000000),
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: "Search “Smartphone",
-                    hintStyle: const TextStyle(
+                    hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.grey,
                         fontSize: 16,
                         fontFamily: "MainFont"),
@@ -129,15 +129,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              const Align(
+               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: EdgeInsets.only(top: 32, bottom: 20),
+                  padding: const EdgeInsets.only(top: 32, bottom: 20),
                   child: Text(
                     "Shop By Category",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: AppColors.black,
+                      
                       fontSize: 20,
                     ),
                   ),
@@ -155,15 +155,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              const Align(
+               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: EdgeInsets.only(top: 48, bottom: 20),
                   child: Text(
                     "Newest Arrival",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: AppColors.black,
+                      
                       fontSize: 20,
                     ),
                   ),

@@ -24,11 +24,11 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
-        backgroundColor: AppColors.white,
+        
         appBar: AppBar(
           forceMaterialTransparency: true,
           automaticallyImplyLeading: false,
-          backgroundColor: AppColors.white,
+          
           centerTitle: true,
           title: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -43,10 +43,10 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                     AppIcons.back,
                   ),
                 ),
-                const Text(
+                 Text(
                   'Checkout',
-                  style: TextStyle(
-                      color: AppColors.black,
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      
                       fontSize: 22,
                       fontWeight: FontWeight.bold),
                 ),
@@ -88,7 +88,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                     ),
                     Text(
                       "Card Holder Name",
-                      style: AppStyles.getTextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
@@ -99,7 +99,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       decoration: InputDecoration(
                           hintText: "Saul Goodmate",
                           hintStyle:
-                          AppStyles.getTextStyle(color: AppColors.grey),
+                          Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey),
                           enabledBorder: const OutlineInputBorder(
                               borderSide: BorderSide(color: AppColors.grey)),
                           border: const OutlineInputBorder(
@@ -111,7 +111,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       padding: const EdgeInsets.only(top: 36),
                       child: Text(
                         "Card Number",
-                        style: AppStyles.getTextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                         ),
@@ -123,7 +123,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       decoration: InputDecoration(
                           hintText: "0123   4567   8901   2345",
                           hintStyle:
-                          AppStyles.getTextStyle(color: AppColors.grey),
+                          Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey),
                           enabledBorder: const OutlineInputBorder(
                               borderSide: BorderSide(color: AppColors.grey)),
                           border: const OutlineInputBorder(
@@ -141,7 +141,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                 padding: const EdgeInsets.only(top: 36),
                                 child: Text(
                                   "Expiry Date",
-                                  style: AppStyles.getTextStyle(
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
                                   ),
@@ -152,7 +152,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                 keyboardType: TextInputType.number,
                                 decoration: InputDecoration(
                                     hintText: "09/28",
-                                    hintStyle: AppStyles.getTextStyle(
+                                    hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         color: AppColors.grey),
                                     enabledBorder: const OutlineInputBorder(
                                         borderSide:
@@ -174,7 +174,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                 padding: const EdgeInsets.only(top: 36),
                                 child: Text(
                                   "CVV",
-                                  style: AppStyles.getTextStyle(
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
                                   ),
@@ -185,7 +185,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                 keyboardType: TextInputType.number,
                                 decoration: InputDecoration(
                                     hintText: "235",
-                                    hintStyle: AppStyles.getTextStyle(
+                                    hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         color: AppColors.grey),
                                     enabledBorder: const OutlineInputBorder(
                                         borderSide:

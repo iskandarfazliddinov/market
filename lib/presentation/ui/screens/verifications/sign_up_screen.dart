@@ -29,23 +29,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     AppImages.logo,
                     width: 90,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(
+                   Padding(
+                    padding: const EdgeInsets.only(
                       top: 30,
                       bottom: 8,
                     ),
                     child: Text(
                       "Register",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
-                        color: AppColors.black,
+                        
                         fontSize: 32,
                       ),
                     ),
                   ),
-                  const Text(
+                   Text(
                     "Create new account",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18),
                   ),
                 ],
               ),
@@ -96,9 +96,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             alignment: PlaceholderAlignment.middle,
                             child: GestureDetector(
                               onTap: () {},
-                              child: const Text(
+                              child: Text(
                                 " Team of use",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   color: AppColors.primary,
                                   fontSize: 18,
@@ -110,10 +110,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               alignment: PlaceholderAlignment.middle,
                               child: GestureDetector(
                                 onTap: () {},
-                                child: const Text(
+                                child: Text(
                                   "and",
-                                  style: TextStyle(
-                                    color: AppColors.black,
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                    
                                     fontSize: 18,
                                   ),
                                 ),
@@ -122,9 +122,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               alignment: PlaceholderAlignment.middle,
                               child: GestureDetector(
                                 onTap: () {},
-                                child: const Text(
+                                child: Text(
                                   " privacy notice",
-                                  style: TextStyle(
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.primary,
                                     fontSize: 18,
@@ -133,8 +133,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               )),
                         ],
                         text: "By signing below, you agree to the",
-                        style: const TextStyle(
-                          color: AppColors.black,
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          
                           fontSize: 18,
                         ),
                       ),
@@ -155,9 +155,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: const Text(
+                          child:  Text(
                             "Login",
-                            style: TextStyle(
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary,
                               fontSize: 18,
@@ -166,7 +166,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ))
                   ],
                   text: "Already have an account? ",
-                  style: const TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: AppColors.grey,
                     fontSize: 18,

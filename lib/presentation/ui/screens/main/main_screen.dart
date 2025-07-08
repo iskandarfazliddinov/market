@@ -34,7 +34,7 @@ class _MainScreenState extends State<MainScreen> {
         return Scaffold(
           key: scaffoldKeyMain,
           drawer: Drawer(
-            backgroundColor: AppColors.white,
+            
             child: ListView(
               children: [
                 SvgPicture.asset(
@@ -42,11 +42,11 @@ class _MainScreenState extends State<MainScreen> {
                   width: 100,
                 ),
                 const SizedBox(height: 28),
-                const Align(
+                 Align(
                   alignment: Alignment.center,
                   child: Text.rich(TextSpan(
                       text: "Swip",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.primary,
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
                       children: [
                         TextSpan(
                             text: "wide",
-                            style: TextStyle(
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
                               color: Color(0xFF000000),

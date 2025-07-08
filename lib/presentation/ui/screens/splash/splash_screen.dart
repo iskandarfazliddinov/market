@@ -37,10 +37,10 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   SvgPicture.asset("assets/images/logo.svg"),
                    const SizedBox(height: 40),
-                    const Text.rich(
+                     Text.rich(
                     TextSpan(
                       text: "Swip",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontSize: 38,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primary,
@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       children: [
                         TextSpan(
                           text: "wide",
-                          style: TextStyle(
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontSize: 38,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF000000),

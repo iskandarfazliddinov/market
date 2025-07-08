@@ -15,7 +15,7 @@ class WAccountItem extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(title,style: AppStyles.getTextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+            Text(title,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold,fontSize: 18,),),
             child
           ],
         ),

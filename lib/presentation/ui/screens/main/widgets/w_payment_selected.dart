@@ -43,7 +43,7 @@ class WPaymentSelected extends StatelessWidget {
                 ),
                 child: Text(
                   "Debit/Credit card",
-                  style: AppStyles.getTextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),

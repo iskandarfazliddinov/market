@@ -21,11 +21,11 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      
       appBar: AppBar(
         forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -40,10 +40,10 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                   AppIcons.back,
                 ),
               ),
-              const Text(
+               Text(
                 'Delivery Information',
-                style: TextStyle(
-                    color: AppColors.black,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    
                     fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),
@@ -86,7 +86,7 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                         children: [
                           Text(
                             "Delivery Information :",
-                            style: AppStyles.getTextStyle(
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -95,7 +95,7 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                             onTap: () {},
                             child: Text(
                               "Change",
-                              style: AppStyles.getTextStyle(
+                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                                 color: AppColors.primary,
@@ -138,7 +138,7 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                                     Text(
                                       textAlign: TextAlign.center,
                                       "Add Address",
-                                      style: AppStyles.getTextStyle(
+                                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         color: AppColors.grey,
                                       ),
                                     ),

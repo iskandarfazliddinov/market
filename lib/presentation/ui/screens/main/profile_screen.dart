@@ -9,6 +9,8 @@ import 'package:market/presentation/ui/resource/app_styles.dart';
 import 'package:market/presentation/ui/screens/main/screens/payment_screen.dart';
 import 'package:market/presentation/ui/screens/main/screens/shipping_addresses_screen.dart';
 import 'package:market/presentation/ui/screens/main/widgets/w_account_item.dart';
+import 'package:market/presentation/ui/state/providers/them_provider.dart';
+import 'package:provider/provider.dart';
 
 @RoutePage()
 class ProfileScreen extends StatefulWidget {
@@ -23,18 +25,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.white,
         centerTitle: true,
-        title: const Text(
+        title:  Text(
           'My Account',
-          style: TextStyle(
-              color: AppColors.black,
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              
               fontSize: 22,
               fontWeight: FontWeight.bold),
         ),
       ),
       body: Scaffold(
-        backgroundColor: AppColors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 28,
@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   child: Text(
                     "Saul Goodmate",
-                    style: AppStyles.getTextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -61,7 +61,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Text(
                   "saulgo35@gmail.com",
-                  style: AppStyles.getTextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 18,
                     color: AppColors.grey,
                   ),
@@ -101,9 +101,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 WAccountItem(
                   title: 'Dark Mode',
-                  child: Switch(
-                    value: false,
-                    onChanged: (_) {},
+                  child: Consumer<ThemProvider>(
+                    builder: (context,provider, child) {
+                      return Switch(
+                        value: provider.isDarkMode,
+                        onChanged: (_) {
+                          provider.toggleTheme();
+                        },
+                      );
+                    }
                   ),
                 ),
                 GestureDetector(
@@ -126,7 +132,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "Logout",
-                      style: AppStyles.getTextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.primary,
                         fontWeight: FontWeight.bold,
                         fontSize: 18,

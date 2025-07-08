@@ -28,7 +28,7 @@ class WOutlineBtn extends StatelessWidget {
           children: [
             Image.asset(icon,width: 30,),
             const SizedBox(width: 12),
-             Text(text,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: AppColors.black,),)
+             Text(text,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 16,fontWeight: FontWeight.bold,),)
           ],
         ),
       ),

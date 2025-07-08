@@ -35,9 +35,9 @@ class WDrawerItem extends StatelessWidget {
         ),
         title: Text(
           title,
-          style: const TextStyle(
+          style:  Theme.of(context).textTheme.bodyLarge?.copyWith(
             fontFamily: "MainFont",
-            color: AppColors.black,
+            
             fontWeight: FontWeight.bold,
             fontSize: 18,
           ),

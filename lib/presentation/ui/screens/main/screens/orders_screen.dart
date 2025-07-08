@@ -19,11 +19,11 @@ class _OrdersScreenState extends State<OrdersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      
       appBar: AppBar(
         forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -38,10 +38,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   AppIcons.back,
                 ),
               ),
-              const Text(
+               Text(
                 'My Orders',
-                style: TextStyle(
-                    color: AppColors.black,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    
                     fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),

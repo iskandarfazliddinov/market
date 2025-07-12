@@ -32,9 +32,9 @@ class _MainScreenState extends State<MainScreen> {
         final currentIndex = tabsRouter.activeIndex;
 
         return Scaffold(
+          // backgroundColor: AppColors.white,
           key: scaffoldKeyMain,
           drawer: Drawer(
-            
             child: ListView(
               children: [
                 SvgPicture.asset(
@@ -57,7 +57,7 @@ class _MainScreenState extends State<MainScreen> {
                             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xFF000000),
+                              color: const Color(0xFF000000),
                             ))
                       ])),
                 ),

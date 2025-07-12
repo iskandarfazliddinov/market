@@ -17,5 +17,6 @@ class RoutePath {
 
   static const String order = "order";
   static const String trackOrder = "track_order";
+  static const String editProfile = "edit_profile";
 
 }

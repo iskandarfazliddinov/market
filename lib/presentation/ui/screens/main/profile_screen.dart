@@ -26,16 +26,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
+        // backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         centerTitle: true,
-        title:  Text(
+        title: Text(
           'My Account',
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              
-              fontSize: 22,
-              fontWeight: FontWeight.bold),
+                fontSize: 22,
+                color: Theme.of(context).primaryColor,
+                fontWeight: FontWeight.bold,
+              ),
         ),
       ),
       body: Scaffold(
+        // backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 28,
@@ -43,9 +46,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Image.asset(
-                  AppImages.person,
-                  width: 150,
+                const SizedBox(height: 40),
+                Stack(
+                  children: [
+                    Image.asset(
+                      AppImages.person,
+                      width: 150,
+                    ),
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        alignment: Alignment.center,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: GestureDetector(
+                          onTap: () {
+                            context.router.push(const EditProfileRoute());
+                          },
+                          child: Container(
+                            height: 40,
+                            width: 40,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: AppColors.primary,
+                            ),
+                            child: const Icon(
+                              Icons.edit,
+                              color: AppColors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
@@ -55,17 +93,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Text(
                     "Saul Goodmate",
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
                   ),
                 ),
                 Text(
                   "saulgo35@gmail.com",
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    fontSize: 18,
-                    color: AppColors.grey,
-                  ),
+                        fontSize: 18,
+                        color: AppColors.grey,
+                      ),
                 ),
                 const SizedBox(height: 48),
                 WAccountItem(
@@ -103,15 +141,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 WAccountItem(
                   title: 'Dark Mode',
                   child: Consumer<ThemProvider>(
-                    builder: (context,provider, child) {
-                      return Switch(
-                        value: provider.isDarkMode,
-                        onChanged: (_) {
-                          provider.toggleTheme();
-                        },
-                      );
-                    }
-                  ),
+                      builder: (context, provider, child) {
+                    return Switch(
+                      value: provider.isDarkMode,
+                      onChanged: (_) {
+                        provider.toggleTheme();
+                      },
+                    );
+                  }),
                 ),
                 GestureDetector(
                   behavior: HitTestBehavior.opaque,
@@ -136,10 +173,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Text(
                         "Logout",
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: AppColors.primary,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
+                              color: AppColors.primary,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
                       ),
                     ),
                   ),

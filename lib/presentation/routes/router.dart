@@ -81,7 +81,11 @@ class AppRouter extends $AppRouter {
                 ),
                 AutoRoute(
                   page: TrackOrderRoute.page,
-                  path: RoutePath.order,
+                  path: RoutePath.trackOrder,
+                ),
+                AutoRoute(
+                  page: EditProfileRoute.page,
+                  path: RoutePath.editProfile,
                 ),
               ],
             ),

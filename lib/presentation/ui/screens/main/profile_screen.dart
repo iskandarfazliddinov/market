@@ -25,6 +25,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        forceMaterialTransparency: true,
         centerTitle: true,
         title:  Text(
           'My Account',
@@ -113,6 +114,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 GestureDetector(
+                  behavior: HitTestBehavior.opaque,
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
@@ -125,17 +127,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: SvgPicture.asset(AppIcons.next),
                   ),
                 ),
-                const SizedBox(height: 28),
-                GestureDetector(
-                  onTap: () {},
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Logout",
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: AppColors.primary,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Logout",
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: AppColors.primary,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ),

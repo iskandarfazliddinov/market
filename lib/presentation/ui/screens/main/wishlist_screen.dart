@@ -18,7 +18,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
+        forceMaterialTransparency: true,
         centerTitle: true,
         title:  Text(
           'Wishlist',

@@ -11,7 +11,7 @@ ThemeData lightMode = ThemeData(
   ),
   brightness: Brightness.light,
   primaryColor: AppColors.primary,
-  scaffoldBackgroundColor: AppColors.backgroundColor,
+  scaffoldBackgroundColor: AppColors.white,
 );
 
 ThemeData darkMode = ThemeData(

@@ -57,17 +57,19 @@ class WCartItem extends StatelessWidget {
               const WRating(
                 padding: EdgeInsets.zero,
               ),
-               Padding(
-                padding: const EdgeInsets.only(top: 8.0, bottom: 6),
-                child: Text(
-                  "Newest Arrival",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    
-                    fontSize: 20,
+               SizedBox(
+                 width: MediaQuery.of(context).size.width-280,
+                 child: Padding(
+                  padding: const EdgeInsets.only(top: 8.0, bottom: 6),
+                  child: Text(
+                    "Newest Arrival",
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
-                ),
-              ),
+                               ),
+               ),
                Text(
                 "\$120.00",
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
